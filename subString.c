@@ -1,9 +1,7 @@
 /* Program to check if given string 2 is a sub string of the main string */
+#include"subString.h"
 
-#include<stdio.h>
-#include<string.h>
-
-static int isSubString(char *a, char *b)
+int isSubString(char *a, char *b)
 {
     printf("len of a=%d\n", strlen(a));
     printf("len of b=%d\n", strlen(b));
@@ -35,29 +33,6 @@ static int isSubString(char *a, char *b)
         {
             return 1;
         }
-    }
-    return 0;
-}
-
-int main()
-{
-    char a[20];
-    printf("Enter the main string\n");
-    fgets(a, 20, stdin);
-    a[strlen(a) -1] = '\0';
-    char b[20];
-    printf("Enter the sub string\n");
-    fgets(b, 20, stdin);
-    b[strlen(b) -1] = '\0';
-    int ret = isSubString(a,b);
-    printf("ret=%d\n",ret);
-    if(ret==1)
-    {
-        printf("Is a sub string\n");
-    }
-    else
-    {
-        printf("Not a sub string\n");
     }
     return 0;
 }
